@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.content {
+    padding: 30px;
+}
+
+.add-doctor-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.add-doctor-section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.add-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.doctor-list h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+.action-links a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.edit-link {
+    background-color: #3498db;
+    color: white;
+}
+
+.delete-link {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.action-links a:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .add-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        margin: 10px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+}

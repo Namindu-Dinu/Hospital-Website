@@ -1,0 +1,324 @@
+/* Global Resets and Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f4f6f7;
+}
+
+/* Hero Parallax Section */
+.about-hero-parallax {
+    height: 70vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+    ), url('images/about.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timeline Section */
+.hospital-timeline {
+    padding: 6rem 2rem;
+    background-color: white;
+}
+
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 1.5rem;
+    position: relative;
+    transform: translateY(50px);
+    transition: var(--transition);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item.left-item {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right-item {
+    left: 50%;
+}
+
+.timeline-content {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px #59b4e9;
+}
+
+/* Mission and Core Values */
+.mission-core-values {
+    background-color: var(--light-color);
+    padding: 6rem 2rem;
+}
+
+.mission-container {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-card {
+    flex: 1;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 35px #59b4e9;
+}
+
+.mission-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.values-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.value-item {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px #59b4e9;
+}
+
+.value-item i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Leadership Showcase */
+.leadership-showcase {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.leadership-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leadership-showcase h2 {
+    font-size: 36px;
+    color: #007bb5; /* Darker blue for heading */
+    margin-bottom: 40px;
+}
+
+.leadership-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.leader-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+}
+
+.leader-card img {
+    width: 100%;
+    height: auto;
+}
+
+.leader-details {
+    padding: 20px;
+}
+
+.leader-details h3 {
+    font-size: 24px;
+    color: #007bb5; /* Darker blue for name */
+    margin-bottom: 10px;
+}
+
+.leader-details p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #007bb5; /* Darker blue for social icons */
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #005f8b; /* Darker shade on hover */
+}
+/* Impact Section */
+.hospital-impact {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-stat h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        text-align: left;
+        left: 0 !important;
+        padding-left: 80px;
+    }
+
+    .mission-container,
+    .leadership-grid,
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta-section {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    color: #007bb5; /* Darker blue for heading */
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.cta-buttons .btn-primary {
+    background-color: #007bb5; /* Darker blue for primary button */
+    color: #fff;
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: #005f8b; /* Darker shade on hover */
+}
+
+.cta-buttons .btn-secondary {
+    background-color: #fff;
+    color: #007bb5; /* Darker blue for secondary button text */
+    border: 2px solid #007bb5;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: #e0f7fa; /* Light blue on hover */
+}
+

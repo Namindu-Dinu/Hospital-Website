@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Records & Billing - Care Compass Hospitals</title>
+    <link rel="stylesheet" type="text/css" href="lab.css"/>
+    <link rel="stylesheet" type="text/css" href="../Home.css"/>
+
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="Home.html" class="logo">
+                <img src="../images/logo.png" alt="Logo" width="50" height="50" />
+                <div class="logo-text">
+                    Care Compass
+                    <span>Hospitals</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Services.html" class="active">Services</a></li>
+                    <li><a href="patient.html">Patient Portal</a></li>
+                    <li><a href="Aboutus.html">About Us</a></li>
+                    <li><a href="Home.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="page-tabs">
+            <button class="tab-button active" data-section="medical-records" onclick="showSection('medical-records')">Medical Records</button>
+            <button class="tab-button" data-section="lab-tests" onclick="showSection('lab-tests')">Lab Tests</button>
+            <button class="tab-button" data-section="bill-payment" onclick="showSection('bill-payment')">Bill Payment</button>
+        </div>
+
+        <!-- Medical Records Section -->
+        <div id="medical-records" class="content-section">
+            <h2>Medical Records</h2>
+            <table class="records-list">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Doctor</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jan 15, 2024</td>
+                        <td>General Checkup</td>
+                        <td>Dr. John Smith</td>
+                        <td>General Medicine</td>
+                        <td><a href="#" class="view-button">View Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dec 28, 2023</td>
+                        <td>Cardiology Consultation</td>
+                        <td>Dr. Sarah Johnson</td>
+                        <td>Cardiology</td>
+                        <td><a href="#" class="view-button">View Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dec 10, 2023</td>
+                        <td>Blood Test Results</td>
+                        <td>Dr. Mike Wilson</td>
+                        <td>Laboratory</td>
+                        <td><a href="#" class="view-button">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Lab Tests Section -->
+        <div id="lab-tests" class="content-section" style="display: none;">
+            <h2>Laboratory Tests</h2>
+            <div class="test-card">
+                <div class="test-header">
+                    <h3>Complete Blood Count (CBC)</h3>
+                    <span class="test-status status-completed">Completed</span>
+                </div>
+                <p><strong>Test Date:</strong> Jan 10, 2024</p>
+                <p><strong>Results Available:</strong> Jan 11, 2024</p>
+                <p><strong>Ordered By:</strong> Dr. Sarah Johnson</p>
+                <br>
+                <a href="#" class="view-button">View Results</a>
+            </div>
+
+            <div class="test-card">
+                <div class="test-header">
+                    <h3>Lipid Profile</h3>
+                    <span class="test-status status-pending">Pending</span>
+                </div>
+                <p><strong>Test Date:</strong> Jan 20, 2024</p>
+                <p><strong>Expected Results:</strong> Jan 21, 2024</p>
+                <p><strong>Ordered By:</strong> Dr. John Smith</p>
+                <p><strong>Preparation:</strong> 12 hours fasting required</p>
+            </div>
+        </div>
+
+        <!-- Bill Payment Section -->
+        <div id="bill-payment" class="content-section" style="display: none;">
+            <h2>Bill Payment</h2>
+            <br>
+            <br>
+
+            <h3>Payment Details</h3>
+            <br>
+            
+            <form class="payment-form">
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="**** **** **** ****" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Card Holder Name</label>
+                    <input type="text" placeholder="Name on card" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="***" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Amount</label>
+                    <input type="number" value="750.00" required>
+                </div>
+
+                <button type="submit" class="payment-button">Make Payment</button>
+            </form>
+
+            <div class="content-section">
+                <h3>Payment History</h3>
+                <table class="records-list">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dec 15, 2023</td>
+                            <td>Laboratory Tests</td>
+                            <td>$250.00</td>
+                            <td><span class="test-status status-completed">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td>Nov 30, 2023</td>
+                            <td>Consultation Fee</td>
+                            <td>$150.00</td>
+                            <td><span class="test-status status-completed">Paid</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="lab.js"></script>
+</body>
+</html>

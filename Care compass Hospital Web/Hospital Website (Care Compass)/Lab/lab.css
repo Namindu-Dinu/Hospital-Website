@@ -1,0 +1,195 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        :root {
+            --primary: #2C3E50;
+            --secondary: #3498DB;
+            --accent: #E74C3C;
+            --light: #00ccff;
+            --success: #2ecc71;
+            --warning: #f1c40f;
+            --danger: #e74c3c;
+        }
+
+        /* Header and Navigation Styles */
+        .main-header {
+            padding: 20px 0;
+            background: #ffffff;
+            box-shadow: 0 2px 10px #3498DB;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Main Content Styles */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tab-button {
+            padding: 12px 24px;
+            background: #f0f2f5;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .content-section p{
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+
+        /* Medical Records Styles */
+        .records-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .records-list th,
+        .records-list td {
+            padding: 15px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+
+        .records-list th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .view-button {
+            padding: 8px 16px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Lab Tests Styles */
+        .test-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .test-status {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .status-pending {
+            background: var(--warning);
+            color: var(--primary);
+        }
+
+        .status-completed {
+            background: var(--success);
+            color: white;
+        }
+
+        /* Billing Styles */
+        
+
+        .payment-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .payment-button {
+            background: var(--success);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .payment-button:hover {
+            background: #27ae60;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .payment-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .tab-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    
